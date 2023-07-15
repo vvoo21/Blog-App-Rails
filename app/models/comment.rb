@@ -4,6 +4,8 @@ class Comment < ApplicationRecord
   after_save :update_comments_count
   after_destroy :decrease_comments_count
 
+  validates :text, presence: true, length: { in: 2..100 }
+
   def update_comments_count
     post.increment!(:comments_count)
   end

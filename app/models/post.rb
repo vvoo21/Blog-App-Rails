@@ -5,6 +5,14 @@ class Post < ApplicationRecord
   after_save :update_posts_count
   after_destroy :decrease_posts_count
 
+  attribute :comments_count, :integer, default: 0
+  attribute :likes_count, :integer, default: 0
+
+  validates :title, presence: true, length: { in: 2..250 }
+  validates :text, presence: true, length: { in: 2..600 }
+  validates :comments_count, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :likes_count, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+
   def recent_comments
     comments.includes(:author).order(created_at: :desc).limit(5)
   end
