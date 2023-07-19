@@ -1,0 +1,17 @@
+<ul>
+   <li>
+      <%= @post.title %>
+    </li>
+    <li>
+      <%= @post.comments_count %>
+    </li>
+    <li>
+      <%= @post.likes_count %>
+    </li>
+    <li>
+      <%= @post.text %>
+    </li>
+</ul>
+<% @post.comments.each do |comment| %>
+    <p class="text"><%= comment.author.name %>: <span class="brown"> <%= comment.text %> </span> </p>
+<% end %>
