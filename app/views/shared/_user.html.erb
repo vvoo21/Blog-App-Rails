@@ -1,0 +1,11 @@
+<li>
+  <%= link_to user do %>
+    <div>
+      <%= display_user_photo(user) %>
+      <div>
+        <h2>Username: <%= user.name %></h2>
+        <p>Number of posts: <%= user.posts_count %></p>
+      </div>
+    </div>
+  <% end %>
+</li>
