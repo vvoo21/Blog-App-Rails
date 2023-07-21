@@ -1,15 +1,3 @@
-<h1>Users</h1>
-
-<ul>
-  <% @users.each do |user| %>
-    <li>
-      <%= user.photo %>
-    </li>
-    <li>
-      <%= user.name %>
-    </li>
-    <li>
-      <%= user.posts_count %>
-    </li>
-  <% end %>
+<ul class="user-list">
+  <%= render partial: 'shared/user', collection: @users %>
 </ul>
