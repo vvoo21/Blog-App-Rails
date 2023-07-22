@@ -1,8 +1,10 @@
-<section>
-  <%= render "shared/user", user: @user %>
-  <div>
-    <h3>Bio</h3>
-    <p><%= @user.bio %></p>
+<section class='flex_column'>
+  <div class='flex space_btw mb_1_5em'>
+    <%= render "shared/user", user: @user %>
+  </div>
+  <div class='flex_column border_solid pad_1em mb_2em'>
+    <h3 class='mb_1em font_size_1_5em'>Bio</h3>
+    <p class='font_size_1_3em'><%= @user.bio %></p>
   </div>
   <%= render "shared/recent_posts", recent_posts: @recent_posts, user: @user %>
 </section>

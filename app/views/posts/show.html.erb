@@ -1,7 +1,7 @@
 <section>
-  <div>
-    <div>
-      <h3>Post #<%= @post.id %> <%= @post.title %></h3>
+  <div class='pad_1em flex_column border_solid mb_0_2em'>
+    <div class='flex space_btw'>
+      <h3 class='mb_1em'>Post #<%= @post.id %> <%= @post.title %></h3>
       <span>Comments: <%= @post.comments_count %>, Likes: <%= @post.likes_count %></span>
     </div>
     <p><%= @post.text %></p>

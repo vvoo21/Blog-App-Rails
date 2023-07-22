@@ -1,12 +1,16 @@
-<section>
-  <%= render "shared/user", user: @user %>
-  <div>
+<section class='flex_column'>
+  <div class='flex space_btw mb_1_5em'>
+    <%= render "shared/user", user: @user %>
+  </div>
+  <div class='flex_column gap_3em'>
     <% @posts.each do |post| %>
-      <%= link_to user_post_path(post.author, post), class: 'user-posts' do %>
-        <%= render "shared/post_info", post: post %>
+      <%= link_to user_post_path(post.author, post), class: 'flex_column' do %>
+        <div class='pad_1em flex_column border_solid mb_0_2em'>
+          <%= render "shared/post_info", post: post %>
+        </div>
         <%= render "shared/post_comments", comments: post.recent_comments %>
       <% end %>
     <% end %>
   </div>
-  <a class="btn secundary-text" href="#">Pagination</a>
+  <a class='border_solid pad_0_5em as_center color_black mt_2em' href="#">Pagination</a>
 </section>

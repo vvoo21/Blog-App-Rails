@@ -1,11 +1,9 @@
 <section>
-  <ul>
+  <ul class='flex_column gap_3em'>
     <% @users.each do |user| %>
       <li>
-        <%= link_to user_path(user) do %>
-          <div>
-            <%= render "shared/user", user: user %>
-          </div>
+        <%= link_to user_path(user), class: 'flex space_btw' do %>
+          <%= render "shared/user", user: user %>
         <% end %>
       </li>
     <% end %>

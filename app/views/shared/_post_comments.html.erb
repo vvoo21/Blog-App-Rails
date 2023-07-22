@@ -1,13 +1,11 @@
 <% if comments.any? %>
-  <div> 
-    <p>Comments:</p>
+  <div class='pad_1em flex_column border_solid'> 
     <% comments.each do |comment| %>
-      <p><%= comment.author.name %>: <span> <%= comment.text %> </span> </p>
+      <p class='color_black'><%= comment.author.name %>: <span> <%= comment.text %> </span> </p>
     <% end %>
   </div>
 <% else %>
-  <div> 
-    <p>Comments:</p>
-    <p>There are no comments</p>
+  <div class='pad_1em flex_column border_solid'>
+    <p class='color_black'>There are no comments</p>
   </div>
 <% end %>
