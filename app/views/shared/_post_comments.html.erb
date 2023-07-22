@@ -1,0 +1,13 @@
+<% if comments.any? %>
+  <div> 
+    <p>Comments:</p>
+    <% comments.each do |comment| %>
+      <p><%= comment.author.name %>: <span> <%= comment.text %> </span> </p>
+    <% end %>
+  </div>
+<% else %>
+  <div> 
+    <p>Comments:</p>
+    <p>There are no comments</p>
+  </div>
+<% end %>
