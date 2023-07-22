@@ -1,21 +1,12 @@
-<h1>Posts</h1>
-
-<ul>
-  <% @posts.each do |post| %>
-   <li>
-      <%= post.title %>
-    </li>
-    <li>
-      <%= post.text %>
-    </li>
-    <li>
-      <%= post.comments_count %>
-    </li>
-    <li>
-      <%= post.likes_count %>
-    </li>
-    <% post.comments.each do |comment| %>
-        <p class="text"><%= comment.author.name %>: <span class="brown"> <%= comment.text %> </span> </p>
+<section>
+  <%= render "shared/user", user: @user %>
+  <div>
+    <% @posts.each do |post| %>
+      <%= link_to user_post_path(post.author, post), class: 'user-posts' do %>
+        <%= render "shared/post_info", post: post %>
+        <%= render "shared/post_comments", comments: post.recent_comments %>
+      <% end %>
     <% end %>
-  <% end %>
-</ul>
+  </div>
+  <a class="btn secundary-text" href="#">Pagination</a>
+</section>
