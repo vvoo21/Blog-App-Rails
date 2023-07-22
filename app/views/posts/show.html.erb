@@ -5,6 +5,7 @@
       <span>Comments: <%= @post.comments_count %>, Likes: <%= @post.likes_count %></span>
     </div>
     <p><%= @post.text %></p>
+    <%= render partial: "shared/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author } %>
   </div>
   <%= render "shared/post_comments", comments: @post.comments %>
 </section>
