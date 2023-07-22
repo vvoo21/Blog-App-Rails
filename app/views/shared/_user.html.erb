@@ -1,11 +1,11 @@
-<li>
-  <%= link_to user do %>
-    <div>
-      <%= display_user_photo(user) %>
-      <div>
-        <h2>Username: <%= user.name %></h2>
-        <p>Number of posts: <%= user.posts_count %></p>
-      </div>
-    </div>
+<div>
+  <% if user.photo.present? %>
+    <%= image_tag(user.photo, alt: 'User photo', width: 200, height: 150) %>
+  <% else %>
+    <%= image_tag('photo.jpg', alt: 'User photo', width: 200, height: 150) %>
   <% end %>
-</li>
+  <div>
+    <h2>Username: <%= user.name %></h2>
+    <p>Number of posts: <%= user.posts_count %></p>
+  </div>
+</div>
