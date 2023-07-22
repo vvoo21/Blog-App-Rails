@@ -1,15 +1,11 @@
-<h1>Users</h1>
-
-<ul>
-  <% @users.each do |user| %>
-    <li>
-      <%= user.photo %>
-    </li>
-    <li>
-      <%= user.name %>
-    </li>
-    <li>
-      <%= user.posts_count %>
-    </li>
-  <% end %>
-</ul>
+<section>
+  <ul class='flex_column gap_3em'>
+    <% @users.each do |user| %>
+      <li>
+        <%= link_to user_path(user), class: 'flex space_btw' do %>
+          <%= render "shared/user", user: user %>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</section>

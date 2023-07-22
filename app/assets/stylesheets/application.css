@@ -1,15 +1,120 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Sura:wght@400;700&display=swap');
+
+:root {
+  --white: #fefefe;
+  --black: #231f20;
+  --blue: #6621e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: 'Sura', serif;
+  background-color: var(--white);
+  min-height: 100vh;
+  color: var(--black);
+}
+
+section {
+  width: 100%;
+  padding: 5em 5em;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex_column {
+  display: flex;
+  flex-direction: column;
+}
+
+.space_btw {
+  justify-content: space-between;
+}
+
+.gap_3em {
+  gap: 3em;
+}
+
+.border_solid {
+  border: 1px solid var(--black);
+}
+
+.width_80 {
+  width: 80%;
+}
+
+.width_15 {
+  width: 15%;
+}
+
+.pad_2_5em {
+  padding: 2.5em;
+}
+
+.pad_1em {
+  padding: 1em;
+}
+
+.pad_0_5em {
+  padding: 0.5em;
+}
+
+.font_w_700 {
+  font-weight: 700;
+}
+
+.font_size_2em {
+  font-size: 2em;
+}
+
+.font_size_1_5em {
+  font-size: 1.5em;
+}
+
+.color_black {
+  color: var(--black);
+}
+
+.as_flex_end {
+  align-self: flex-end;
+}
+
+.as_center {
+  align-self: center;
+}
+
+.ai_center {
+  align-items: center;
+}
+
+.font_size_1_3em {
+  font-size: 1.3em;
+}
+
+.mb_1_5em {
+  margin-bottom: 1.5em;
+}
+
+.mb_0_2em {
+  margin-bottom: 0.2em;
+}
+
+.mb_1em {
+  margin-bottom: 1em;
+}
+
+.mb_2em {
+  margin-bottom: 2em;
+}
+
+.mt_2em {
+  margin-top: 2em;
+}

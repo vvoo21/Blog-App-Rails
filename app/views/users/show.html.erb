@@ -1,30 +1,10 @@
-<ul>
-    <li>
-      <%= @user.photo %>
-    </li>
-    <li>
-      <%= @user.name %>
-    </li>
-    <li>
-      <%= @user.posts_count %>
-    </li>
-    <li>
-      <%= @user.bio %>
-    </li>
-</ul>
-<ul>
-  <% @user.posts.each do |user_post| %>
-    <li>
-      <%= user_post.title %>
-    </li>
-    <li>
-      <%= user_post.text %>
-    </li>
-    <li>
-      <%= user_post.comments_count %>
-    </li>
-    <li>
-      <%= user_post.likes_count %>
-    </li>
-  <% end %>
-</ul>
+<section class='flex_column'>
+  <div class='flex space_btw mb_1_5em'>
+    <%= render "shared/user", user: @user %>
+  </div>
+  <div class='flex_column border_solid pad_1em mb_2em'>
+    <h3 class='mb_1em font_size_1_5em'>Bio</h3>
+    <p class='font_size_1_3em'><%= @user.bio %></p>
+  </div>
+  <%= render "shared/recent_posts", recent_posts: @recent_posts, user: @user %>
+</section>
