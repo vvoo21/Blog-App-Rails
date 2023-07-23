@@ -6,8 +6,10 @@
       <% end %>
     <% end %>
   </div>
-
-  <%= link_to "See all posts", user_posts_path(user), class: 'border_solid pad_0_5em as_center color_black' %>
+  <div class='flex gap_3em center'>
+  <%= link_to "See all posts", user_posts_path(user), class: 'border_solid pad_0_5em color_black' %>
+  <%= link_to "New post", new_user_post_path(user), class: 'border_solid pad_0_5em color_black' %>
+  </div>
 <% else %>
   <p class="text">There are no Posts</p>
 <% end %>
