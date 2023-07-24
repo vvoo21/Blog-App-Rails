@@ -1,0 +1,21 @@
+<%= form_with model: post, url: user_posts_path do |form| %>
+  <div>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+    <% post.errors.full_messages_for(:title).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %><br>
+    <% post.errors.full_messages_for(:text).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

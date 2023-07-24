@@ -39,8 +39,16 @@ section {
   justify-content: space-between;
 }
 
+.center {
+  justify-content: center;
+}
+
 .gap_3em {
   gap: 3em;
+}
+
+.gap_1em {
+  gap: 1em;
 }
 
 .border_solid {
@@ -53,6 +61,10 @@ section {
 
 .width_15 {
   width: 15%;
+}
+
+.width_auto {
+  width: fit-content;
 }
 
 .pad_2_5em {
@@ -79,6 +91,10 @@ section {
   font-size: 1.5em;
 }
 
+.font_size_0_5em {
+  font-size: 0.8em;
+}
+
 .color_black {
   color: var(--black);
 }
@@ -93,6 +109,10 @@ section {
 
 .ai_center {
   align-items: center;
+}
+
+.text_a {
+  text-align: center;
 }
 
 .font_size_1_3em {
@@ -117,4 +137,8 @@ section {
 
 .mt_2em {
   margin-top: 2em;
+}
+
+.mt_0_5em {
+  margin-top: 0.5em;
 }

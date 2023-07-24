@@ -1,10 +1,14 @@
-<section>
+<section class='flex_column'>
   <div class='pad_1em flex_column border_solid mb_0_2em'>
     <div class='flex space_btw'>
       <h3 class='mb_1em'>Post #<%= @post.id %> <%= @post.title %></h3>
       <span>Comments: <%= @post.comments_count %>, Likes: <%= @post.likes_count %></span>
     </div>
     <p><%= @post.text %></p>
+    <div class='flex gap_1em'>
+      <%= render partial: "shared/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author } %>
+      <%= link_to "Add a comment 📝", new_user_post_comment_path(@post.author, @post), class: 'color_black border_solid width_auto font_size_0_5em as_center' %>
+    </div>
   </div>
   <%= render "shared/post_comments", comments: @post.comments %>
 </section>

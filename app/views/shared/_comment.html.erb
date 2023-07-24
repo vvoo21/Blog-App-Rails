@@ -1,0 +1,9 @@
+<%= form_with model: comment, url: user_post_comments_path  do |form| %>
+  <p>
+    <%= form.label :text %><br>
+    <%= form.text_area :text %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
