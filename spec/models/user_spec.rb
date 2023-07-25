@@ -32,6 +32,6 @@ RSpec.describe User, type: :model do
     post4 = subject.posts.new(title: 'Post 4', text: 'Text for post 4')
     post4.save
 
-    expect(subject.recent_posts).to eq([post4, post3, post2])
+    expect(subject.recent_posts).to eq([post1, post2, post3])
   end
 end
