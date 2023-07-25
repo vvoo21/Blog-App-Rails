@@ -1,5 +1,5 @@
 <% if user.photo.present? %>
-  <%= image_tag(user.photo, alt: 'User photo', size: "100x150", class: 'width_15 border_solid') %>
+  <%= image_tag(user.photo, alt: 'User photo', size: "200x200", class: 'width_15 border_solid') %>
 <% else %>
   <%= image_tag('photo.png', alt: 'User photo', size: "200x200", class: 'width_15 border_solid') %>
 <% end %>
