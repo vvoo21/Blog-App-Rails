@@ -10,5 +10,5 @@
       <%= link_to "Add a comment 📝", new_user_post_comment_path(@post.author, @post), class: 'color_black border_solid width_auto font_size_0_5em as_center' %>
     </div>
   </div>
-  <%= render "shared/post_comments", comments: @post.comments %>
+  <%= render "shared/post_comments", comments: @comments %>
 </section>
