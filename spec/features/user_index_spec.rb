@@ -1,4 +1,4 @@
-describe "user index page", type: :feature do
+describe 'user index page', type: :feature do
   before(:each) do
     @user1 = User.create(name: 'Alex', photo: 'https://picsum.photos/200', bio: 'Bio for user 1', posts_count: 6)
     @user2 = User.create(name: 'Hana', photo: 'https://picsum.photos/200', bio: 'Bio for user 2', posts_count: 3)

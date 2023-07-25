@@ -1,4 +1,4 @@
-describe "user show page", type: :feature do
+describe 'user show page', type: :feature do
   before(:each) do
     @user1 = User.create(name: 'Will', photo: 'https://picsum.photos/200', bio: 'Bio for user 1', posts_count: 10)
     @post1 = Post.create(title: 'post1', text: 'text1', comments_count: 5, likes_count: 13, author: @user1)
@@ -7,15 +7,15 @@ describe "user show page", type: :feature do
     @post4 = Post.create(title: 'post4', text: 'text4', comments_count: 5, likes_count: 13, author: @user1)
     visit user_path(@user1)
   end
-  
+
   it "displays the user's profile picture" do
     expect(page).to have_css("img[src*='#{@user1.photo}']")
   end
-  
+
   it "displays the user's username" do
     expect(page).to have_content(@user1.name)
   end
-  
+
   it 'displays the number of posts the user has written' do
     expect(page).to have_content(@user1.posts_count)
   end
@@ -37,7 +37,7 @@ describe "user show page", type: :feature do
   it "displays a button that lets view all of a user's posts" do
     expect(page).to have_content('See all posts')
   end
-  
+
   it "is redirected to that post's show page." do
     click_link(@post1.title, href: "/users/#{@user1.id}/posts/#{@post1.id}")
     expect(page).to have_current_path(user_post_path(@post1.author, @post1))
