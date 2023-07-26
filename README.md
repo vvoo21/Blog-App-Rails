@@ -124,6 +124,12 @@ To run the project tests, execute the following command:
 - Twitter: [@vaneoliverosp](https://twitter.com/vaneoliverosp)
 - LinkedIn: [vaneoliverosp](https://www.linkedin.com/in/vaneoliverosp/)
 
+👤 **Fredo Fleur**
+
+- GitHub: [fredo509](https://github.com/fredo509)
+- Twitter: [@Fredo_st_fleur](https://twitter.com/Fredo_st_fleur?t=kXdEx7GqmngfCYId_vu8Tg&s=09)
+- LinkedIn: [fredo-st-fleur](https://www.linkedin.com/in/fredo-st-fleur)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
