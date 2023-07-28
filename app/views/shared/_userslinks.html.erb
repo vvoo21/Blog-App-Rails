@@ -1,0 +1,9 @@
+<div>
+  <% if user_signed_in?  %>
+    <%= link_to "Edit profile", edit_user_registration_path, class: 'btn secundary-text' %>
+    <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn secundary-text'  %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, class: 'btn secundary-text'  %>
+    <%= link_to "Login", new_user_session_path, class: 'btn secundary-text' %>
+  <% end %>
+</div>

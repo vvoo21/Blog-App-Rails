@@ -1,7 +1,7 @@
 <% if user.photo.present? %>
-  <%= image_tag(user.photo, alt: 'User photo', size: "200x200", class: 'width_15 border_solid') %>
+  <%= image_tag(user.photo, alt: 'User photo', size: "200x150", class: 'width_15 border_solid') %>
 <% else %>
-  <%= image_tag('photo.png', alt: 'User photo', size: "200x200", class: 'width_15 border_solid') %>
+  <%= image_tag('photo.png', alt: 'User photo', size: "200x150", class: 'width_15 border_solid') %>
 <% end %>
 <div class='flex space_btw border_solid width_80 ai_center pad_2_5em'>
   <h2 class='font_w_700 font_size_2em color_black'>User name: <%= user.name %></h2>
