@@ -63,10 +63,6 @@ section {
   width: 80%;
 }
 
-.width_30 {
-  width: 30%;
-}
-
 .width_100 {
   width: 100%;
 }
@@ -171,7 +167,6 @@ section {
   margin-top: 0.5em;
 }
 
-
 .input {
   padding: 0.8em;
   border: 1px solid var(--black);
@@ -180,7 +175,7 @@ section {
   outline: none;
 }
 
-.blue_bg{
+.blue_bg {
   background-color: var(--blue);
 }
 
