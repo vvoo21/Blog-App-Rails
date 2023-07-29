@@ -1,0 +1,35 @@
+<section class='flex_column ai_center'>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "width_30 center" }) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.text_field :name, placeholder: "Username", class: "input width_100" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :photo, placeholder: "Photo", class: "input width_100" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :bio, placeholder: "Bio", class: "input width_100" %>
+  </div>
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "input width_100" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password", class: "input width_100" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation", class: "input width_100" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up", class: "input width_100 blue_bg text_white" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+</section>
