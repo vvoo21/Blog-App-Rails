@@ -1,4 +1,4 @@
-<div>
+<div class='flex pad_5x2em flex_end gap_1em'>
   <% if user_signed_in?  %>
     <%= link_to "Edit profile", edit_user_registration_path, class: 'btn secundary-text' %>
     <%= button_to "Logout", destroy_user_session_path, method: :delete, class: 'btn secundary-text'  %>
